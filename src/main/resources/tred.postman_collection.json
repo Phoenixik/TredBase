@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "a9e0f5a8-8d57-447e-a3cc-6110ee73bbf1",
+		"name": "tred",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25726304"
+	},
+	"item": [
+		{
+			"name": "addparents",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "admin123",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parents\": [\r\n        {\r\n            \"fullName\": \"Kelvin king\",\r\n            \"email\": \"youngtola@gmail.com\",\r\n            \"phoneNumber\": \"08106351038\",\r\n            \"parentBalance\": 100000\r\n        },\r\n        {\r\n            \"fullName\": \"Rachel king\",\r\n            \"email\": \"youngrach@gmail.com\",\r\n            \"phoneNumber\": \"08106351039\",\r\n            \"parentBalance\": 50000\r\n        }\r\n    ],\r\n    \"children\": [\r\n        {\r\n            \"name\": \"sunny king\",\r\n            \"balance\": -100000\r\n        },\r\n        {\r\n            \"name\": \"lenny king\",\r\n            \"balance\": -100000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/parents/addStudents"
+			},
+			"response": [
+				{
+					"name": "addparentsSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"Kelvin king\",\r\n    \"email\" : \"youngtola@gmail.com\",\r\n    \"phoneNumber\" : \"08106351038\",\r\n    \"parentBalance\" : 100000,\r\n    \"children\" : [\r\n        {\r\n            \"name\" : \"sunny king\",\r\n            \"balance\" : -100000\r\n        }, \r\n        {\r\n            \"name\" : \"lenny king\",\r\n            \"balance\" : -100000\r\n        }\r\n    ]\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/parents/addStudents"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Apr 2025 05:46:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"description\": \"Operation Successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "makePayments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "admin123"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parentId\" : 1,\r\n    \"studentId\" : 2,\r\n    \"paymentAmount\" : 50000\r\n    \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/transactions/makeSchoolFeesPayment"
+			},
+			"response": [
+				{
+					"name": "makePaymentSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parentId\" : 1,\r\n    \"studentId\" : 1,\r\n    \"paymentAmount\" : 1000\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/transactions/makeSchoolFeesPayment"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Apr 2025 05:56:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"description\": \"Operation Successful\"\n}"
+				}
+			]
+		}
+	]
+}
