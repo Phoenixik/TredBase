@@ -1,0 +1,5 @@
+INSERT INTO user (username, password, role) VALUES (
+  'admin',
+  '$2a$10$DkqHJy7aXuK6CvB1abJ62OcX.Y1J6PmZdTov2wAQBtZVg1lgFr9QO', -- password: admin123
+  'ROLE_ADMIN'
+);
